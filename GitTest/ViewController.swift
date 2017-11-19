@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var NameArr = [String]()
+    var NameArr = [Double]()
     
     
     override func viewDidLoad() {
