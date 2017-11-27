@@ -13,6 +13,8 @@
 		CC5991861FC174B600EED9F6 /* GitTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC5991841FC174B600EED9F6 /* GitTest.xcdatamodeld */; };
 		CC5991881FC174B600EED9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5991871FC174B600EED9F6 /* Assets.xcassets */; };
 		CC59918B1FC174B600EED9F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5991891FC174B600EED9F6 /* LaunchScreen.storyboard */; };
+		CC7D321D1FCC759B00E609C0 /* GMSMapView+ClusterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D32191FCC759A00E609C0 /* GMSMapView+ClusterKit.m */; };
+		CC7D321E1FCC759B00E609C0 /* CKGoogleMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D321A1FCC759B00E609C0 /* CKGoogleMapsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,11 @@
 		CC5991871FC174B600EED9F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC59918A1FC174B600EED9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC59918C1FC174B600EED9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7D32181FCC759A00E609C0 /* GitTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC7D32191FCC759A00E609C0 /* GMSMapView+ClusterKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMSMapView+ClusterKit.m"; sourceTree = "<group>"; };
+		CC7D321A1FCC759B00E609C0 /* CKGoogleMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKGoogleMapsViewController.m; sourceTree = "<group>"; };
+		CC7D321B1FCC759B00E609C0 /* CKGoogleMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKGoogleMapsViewController.h; sourceTree = "<group>"; };
+		CC7D321C1FCC759B00E609C0 /* GMSMapView+ClusterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMSMapView+ClusterKit.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +65,16 @@
 			children = (
 				CC59917D1FC174B600EED9F6 /* AppDelegate.swift */,
 				CC59917F1FC174B600EED9F6 /* ViewController.swift */,
+				CC7D321B1FCC759B00E609C0 /* CKGoogleMapsViewController.h */,
+				CC7D321A1FCC759B00E609C0 /* CKGoogleMapsViewController.m */,
+				CC7D321C1FCC759B00E609C0 /* GMSMapView+ClusterKit.h */,
+				CC7D32191FCC759A00E609C0 /* GMSMapView+ClusterKit.m */,
 				CC5991811FC174B600EED9F6 /* Main.storyboard */,
 				CC5991871FC174B600EED9F6 /* Assets.xcassets */,
 				CC5991891FC174B600EED9F6 /* LaunchScreen.storyboard */,
 				CC59918C1FC174B600EED9F6 /* Info.plist */,
 				CC5991841FC174B600EED9F6 /* GitTest.xcdatamodeld */,
+				CC7D32181FCC759A00E609C0 /* GitTest-Bridging-Header.h */,
 			);
 			path = GitTest;
 			sourceTree = "<group>";
@@ -94,12 +106,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Akhil Arora";
 				TargetAttributes = {
 					CC5991791FC174B600EED9F6 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 74Z73CEYAH;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -143,6 +156,8 @@
 				CC5991861FC174B600EED9F6 /* GitTest.xcdatamodeld in Sources */,
 				CC5991801FC174B600EED9F6 /* ViewController.swift in Sources */,
 				CC59917E1FC174B600EED9F6 /* AppDelegate.swift in Sources */,
+				CC7D321E1FCC759B00E609C0 /* CKGoogleMapsViewController.m in Sources */,
+				CC7D321D1FCC759B00E609C0 /* GMSMapView+ClusterKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +193,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -186,7 +203,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -228,7 +249,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -236,7 +259,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -265,12 +292,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 74Z73CEYAH;
 				INFOPLIST_FILE = GitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akhil.GitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "GitTest/GitTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -278,12 +310,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 74Z73CEYAH;
 				INFOPLIST_FILE = GitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akhil.GitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "GitTest/GitTest-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -306,6 +342,7 @@
 				CC5991911FC174B600EED9F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
